@@ -15,6 +15,8 @@ description: Explotación de MS17-010 (EternalBlue) sobre Windows 7 con Metasplo
 pin: false
 math: false
 mermaid: false
+img:
+  posts: /assets/img/posts/Blue_banner.png
 share: true
 ---
 
