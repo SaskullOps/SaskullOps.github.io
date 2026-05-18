@@ -17,7 +17,7 @@ description: Encadenamiento de SMB anónimo, NFS sin autenticar y ProFTPD mod_co
 pin: false
 math: false
 img: 
-  posts: /assets/img/posts/Kenobi_banner.png
+  path: /assets/img/posts/Kenobi_banner.png
 mermaid: false
 share: true
 ---
