@@ -14,10 +14,10 @@ tags:
   - path-hijacking
   - beginner
 description: Encadenamiento de SMB anónimo, NFS sin autenticar y ProFTPD mod_copy (CVE-2015-3306) para obtener acceso SSH como kenobi. Escalada a root vía Path Hijacking sobre un binario SUID que llama a curl sin ruta absoluta.
-pin: false
 img: 
   path: /assets/img/posts/Kenobi_banner.png
   alt: CTF TryHackMe Write-up
+pin: false
 math: false
 mermaid: false
 share: true
