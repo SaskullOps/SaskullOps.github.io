@@ -12,11 +12,12 @@ tags:
   - ntlm
   - beginner
 description: Explotación de MS17-010 (EternalBlue) sobre Windows 7 con Metasploit. Sesión meterpreter directa como SYSTEM, volcado de hashes NTLM y crackeo con John.
+img:
+  path: /assets/img/posts/Blue_banner.png
+  alt: CTF TryHackMe Write-up
 pin: false
 math: false
 mermaid: false
-img:
-  path: /assets/img/posts/Blue_banner.png
 share: true
 ---
 
