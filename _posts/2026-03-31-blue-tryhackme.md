@@ -16,7 +16,7 @@ pin: false
 math: false
 mermaid: false
 img:
-  posts: /assets/img/posts/Blue_banner.png
+  path: /assets/img/posts/Blue_banner.png
 share: true
 ---
 
