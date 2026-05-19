@@ -1,5 +1,5 @@
 ---
-title: Blue — TryHackMe Write-up
+title: 📝 Blue — TryHackMe Write-up
 date: 2026-03-31 18:00:00 +0100
 categories:
   - Write-ups
