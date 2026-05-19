@@ -1,0 +1,372 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
+
+/* append your custom style below */
+
+/* ============================================
+   CUSTOM STYLES PARA SASKULLOPS BLOG
+   ============================================ */
+
+/* ═══════════════════════════════════════════
+   1. COLORES PRINCIPALES (Tema Ciberseguridad)
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Colores principales */
+  --primary-color: #c92a2a; /* Rojo seguridad */
+  --secondary-color: #00ff00; /* Verde hacker */
+  --accent-color: #1a1a1e; /* Dark background */
+  --text-light: #e0e0e0; /* Texto claro */
+  --border-color: #2a2a2a; /* Bordes oscuros */
+}
+
+/* ═══════════════════════════════════════════
+   2. ENLACES Y BOTONES
+   ═══════════════════════════════════════════ */
+
+a {
+  color: #c92a2a;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+/* Botones */
+.btn,
+button {
+  background-color: #c92a2a;
+  color: white;
+  border: 1px solid #c92a2a;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #00ff00;
+  color: #1a1a1e;
+  border-color: #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════
+   3. BOXES Y ALERTAS
+   ═══════════════════════════════════════════ */
+
+/* Box información (azul) */
+.info-box,
+.alert-info {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-left: 4px solid #667eea;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+}
+
+/* Box advertencia (amarillo) */
+.warning-box,
+.alert-warning {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  color: #856404;
+}
+
+/* Box éxito (verde) */
+.success-box,
+.alert-success {
+  background: #d4edda;
+  border-left: 4px solid #28a745;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  color: #155724;
+}
+
+/* Box peligro (rojo) */
+.danger-box,
+.alert-danger {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+  color: #721c24;
+}
+
+/* ═══════════════════════════════════════════
+   4. BADGES DE DIFICULTAD
+   ═══════════════════════════════════════════ */
+
+.difficulty {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  font-size: 0.875em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.difficulty-beginner {
+  background: #28a745;
+  color: white;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+}
+
+.difficulty-intermediate {
+  background: #ffc107;
+  color: #333;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+}
+
+.difficulty-advanced {
+  background: #dc3545;
+  color: white;
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.3);
+}
+
+/* ═══════════════════════════════════════════
+   5. BADGES DE PLATAFORMA
+   ═══════════════════════════════════════════ */
+
+.platform-badge {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0.3em;
+  text-transform: uppercase;
+}
+
+.platform-tryhackme {
+  background: #1abc9c;
+  color: white;
+}
+
+.platform-hackthebox {
+  background: #9c27b0;
+  color: white;
+}
+
+.platform-ctf {
+  background: #e74c3c;
+  color: white;
+}
+
+/* ═══════════════════════════════════════════
+   6. TÍTULOS Y HEADINGS
+   ═══════════════════════════════════════════ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #c92a2a;
+  transition: color 0.3s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover {
+  color: #00ff00;
+}
+
+/* ═══════════════════════════════════════════
+   7. CÓDIGO Y TERMINAL
+   ═══════════════════════════════════════════ */
+
+code {
+  background: #1a1a1e;
+  color: #00ff00;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+pre {
+  background: #1a1a1e;
+  border-left: 4px solid #c92a2a;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+}
+
+pre code {
+  color: #00ff00;
+  background: none;
+  padding: 0;
+}
+
+/* Terminal style */
+.terminal,
+.command-block {
+  background: #0a0e27;
+  color: #00ff00;
+  font-family: 'Monaco', 'Courier New', monospace;
+  padding: 1rem;
+  border-left: 3px solid #00ff00;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+}
+
+/* ═══════════════════════════════════════════
+   8. CITAS Y BLOCKQUOTES
+   ═══════════════════════════════════════════ */
+
+blockquote {
+  border-left: 4px solid #c92a2a;
+  padding-left: 1em;
+  color: #888;
+  font-style: italic;
+  margin: 1.5em 0;
+}
+
+blockquote strong {
+  color: #c92a2a;
+}
+
+/* ═══════════════════════════════════════════
+   9. TABLAS
+   ═══════════════════════════════════════════ */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+table th {
+  background: #c92a2a;
+  color: white;
+  padding: 1em;
+  text-align: left;
+  font-weight: bold;
+}
+
+table td {
+  border: 1px solid #2a2a2a;
+  padding: 0.75em 1em;
+}
+
+table tr:hover {
+  background: #2a2a2a;
+}
+
+/* ═══════════════════════════════════════════
+   10. TARJETAS Y POSTS
+   ═══════════════════════════════════════════ */
+
+.post-item,
+.card {
+  border-left: 4px solid #c92a2a;
+  transition: all 0.3s ease;
+}
+
+.post-item:hover,
+.card:hover {
+  border-left-color: #00ff00;
+  box-shadow: 0 4px 12px rgba(200, 42, 42, 0.2);
+}
+
+/* ═══════════════════════════════════════════
+   11. TAGS Y CATEGORÍAS
+   ═══════════════════════════════════════════ */
+
+.tag,
+.category {
+  background: #2a2a2a;
+  color: #00ff00;
+  padding: 0.3em 0.6em;
+  border-radius: 0.25em;
+  font-size: 0.85em;
+  border: 1px solid #c92a2a;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0.2em;
+}
+
+.tag:hover,
+.category:hover {
+  background: #c92a2a;
+  color: white;
+}
+
+/* ═══════════════════════════════════════════
+   12. SIDEBAR Y ELEMENTOS ESPECIALES
+   ═══════════════════════════════════════════ */
+
+/* Línea de separación roja */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #c92a2a 0%, #00ff00 100%);
+  margin: 2em 0;
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid #c92a2a;
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════
+   13. DARK MODE (Preferencia del sistema)
+   ═══════════════════════════════════════════ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0a0e27;
+    color: #e0e0e0;
+  }
+
+  code {
+    background: #1a1a1e;
+    color: #00ff00;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  code {
+    background: #ececec;
+    color: #c92a2a;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   14. RESPONSIVE (Móvil)
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .difficulty,
+  .platform-badge {
+    display: block;
+    margin: 0.5em 0;
+  }
+
+  pre {
+    font-size: 0.85em;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   FIN DE CUSTOM STYLES
+   ═══════════════════════════════════════════ */
