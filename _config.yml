@@ -153,6 +153,10 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+      
+# Custom CSS injection
+head_includes: 
+  - <link rel="stylesheet" href="/assets/css/custom.css">
 
 sass:
   style: compressed
