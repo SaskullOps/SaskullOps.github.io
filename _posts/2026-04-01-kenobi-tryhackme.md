@@ -1,5 +1,5 @@
 ---
-title: Kenobi — TryHackMe Write-up
+title: 📝 Kenobi — TryHackMe Write-up
 date: 2026-04-01 19:00:00 +0200
 categories:
   - Write-ups
