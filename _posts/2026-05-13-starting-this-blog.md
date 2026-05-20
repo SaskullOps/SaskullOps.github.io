@@ -1,10 +1,15 @@
 ---
 title: "Starting this blog: notes from someone breaking into security"
 date: 2026-05-13 19:00:00 +0100
-categories: [Meta]
+categories:
+  - Aprendizaje
 image:
   path: /assets/img/posts/Starting_blog.png
-tags: [intro, career, learning]
+tags:
+  - intro
+  - career
+  - learning
+  - cybersecurity
 pin: true
 ---
 

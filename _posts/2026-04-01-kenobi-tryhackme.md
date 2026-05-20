@@ -2,30 +2,44 @@
 title: 📝 Kenobi — TryHackMe Write-up
 date: 2026-04-01 19:00:00 +0200
 categories:
-  - Write-ups
+  - CTF
   - TryHackMe
 tags:
   - linux
   - smb
   - nfs
   - proftpd
-  - suid
-  - privesc
+  - privilege-escalation
   - path-hijacking
-  - beginner
 description: Encadenamiento de SMB anónimo, NFS sin autenticar y ProFTPD mod_copy (CVE-2015-3306) para obtener acceso SSH como kenobi. Escalada a root vía Path Hijacking sobre un binario SUID que llama a curl sin ruta absoluta.
 image: 
   path: /assets/img/posts/Kenobi_banner.png
   alt: CTF TryHackMe Write-up
 pin: false
 math: false
-mermaid: false
+mermaid: true
 share: true
 ---
 
 Kenobi está catalogada como "easy" en TryHackMe pero técnicamente es de las salas que más aprovechas si vas con calma, porque **el truco no está en una técnica aislada sino en cómo encadenas cuatro**: SMB anónimo te da la pista, NFS te da un canal de salida, ProFTPD te da el "copy" que necesitas, y un SUID mal escrito te lleva a root. Ningún paso por separado es suficiente.
 
 Aquí ves en miniatura cómo se construyen los ataques reales: nadie tiene un exploit mágico que te da root de una. Lo que tienen es la paciencia de encontrar tres bugs medianos y darse cuenta de que combinándolos pasas de "no tengo nada" a "soy root". Es exactamente la mentalidad que separa a alguien que sabe correr exploits de alguien que sabe pentesting.
+
+```mermaid
+graph LR
+    A["🖥️ Attacker"] -->|nmap| B["Port Scan"]
+    B -->|445,111,21| C["Services"]
+    C -->|SMB/NFS| D["Data Access"]
+    D -->|ProFTPD| E["SSH Key"]
+    E -->|Path Hijack| F["🚩 Root"]
+```
+
+| Propiedad | Valor |
+|-----------|-------|
+| **Plataforma** | TryHackMe |
+| **Dificultad** | 🟢 Beginner |
+| **Tiempo** | ~45 min |
+| **Técnicas** | SMB, NFS, Path Hijacking |
 
 > **TL;DR**: SMB anonymous expone un `log.txt` que revela una clave SSH privada en `/home/kenobi/.ssh/id_rsa` → ProFTPD 1.3.5 con `mod_copy` permite copiar esa clave sin auth a `/var/nfs` → montamos NFS y nos llevamos la clave → SSH como `kenobi` → binario SUID `/usr/bin/menu` llama a `curl` sin ruta absoluta → Path Hijacking con `/bin/sh` falso en `/tmp` → root.
 {: .prompt-info }

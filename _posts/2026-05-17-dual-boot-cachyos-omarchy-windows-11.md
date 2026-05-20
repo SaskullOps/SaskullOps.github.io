@@ -3,18 +3,14 @@ title: Dual boot Windows 11 + CachyOS con Omarchy en dos NVMe sin perder nada
 date: 2026-05-17 12:00:00 +0200
 categories:
   - Linux
-  - Tutoriales
+  - Fundamentos
 tags:
-  - arch
+  - linux
   - cachyos
-  - omarchy
   - dual-boot
-  - windows-11
-  - hyprland
-  - limine
+  - arch
   - btrfs
-  - snapper
-  - nvme
+  - omarchy
 description: Guía paso a paso para instalar CachyOS con la capa Omarchy en un segundo NVMe junto a Windows 11, con verificación a prueba de fallos para no romper el arranque de Windows.
 image:
   path: /assets/img/posts/cachyos-omarchy-dualboot.png

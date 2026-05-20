@@ -2,14 +2,14 @@
 title: 📝 Blue — TryHackMe Write-up
 date: 2026-03-31 18:00:00 +0100
 categories:
-  - Write-ups
+  - CTF
   - TryHackMe
 tags:
   - windows
   - smb
   - eternalblue
   - metasploit
-  - ntlm
+  - exploit
   - beginner
 description: Explotación de MS17-010 (EternalBlue) sobre Windows 7 con Metasploit. Sesión meterpreter directa como SYSTEM, volcado de hashes NTLM y crackeo con John.
 image:
