@@ -12,6 +12,7 @@
    de búsqueda, etc. heredan tu paleta automáticamente y respetan el
    toggle claro/oscuro (data-mode) en vez de depender solo del SO.
 
+<<<<<<< Updated upstream
    Paleta:
      Rojo seguridad  -> color dominante (enlaces, títulos, acentos)
      Verde terminal  -> acento PUNTUAL, reservado a código/terminal/badges
@@ -359,16 +360,583 @@ a {
 /* ═══════════════════════════════════════════════════════════════════
    10. RESPONSIVE
    ═══════════════════════════════════════════════════════════════════ */
+=======
+/* ============================================
+   CUSTOM STYLES - SASKULLOPS INFOSEC BLOG
+   ============================================
+   Tema profesional y minimalista para blog de
+   ciberseguridad. Colores elegantes sin ser
+   agresivos. Respeta los estilos de Chirpy.
+   ============================================ */
+
+/* ═══════════════════════════════════════════
+   1. PALETA DE COLORES CORPORATIVOS
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Colores profesionales para infosec */
+  --primary: #0066cc;        /* Azul corporativo (seguridad) */
+  --secondary: #00a8cc;      /* Cian profesional (confianza) */
+  --accent: #7c3aed;         /* Violeta (sofisticación) */
+  --success: #059669;        /* Verde profesional */
+  --warning: #d97706;        /* Naranja suave */
+  --danger: #dc2626;         /* Rojo profesional (no agresivo) */
+  
+  /* Tipografía y espaciado */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ═══════════════════════════════════════════
+   2. SOPORTE LIGHT/DARK MODE
+   ═══════════════════════════════════════════ */
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-subtle: #f9fafb;
+    --border-subtle: #e5e7eb;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --bg-subtle: #111827;
+    --border-subtle: #374151;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   3. ENLACES CON ESTILO PROFESIONAL
+   ═══════════════════════════════════════════ */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Links en headings y títulos */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: var(--secondary);
+}
+
+/* ═══════════════════════════════════════════
+   4. BOTONES
+   ═══════════════════════════════════════════ */
+
+.btn,
+button {
+  background-color: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn:hover,
+button:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 102, 204, 0.15);
+}
+
+.btn:active,
+button:active {
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════
+   5. CAJAS DE ALERTA Y INFORMACIÓN
+   ═══════════════════════════════════════════ */
+
+/* Información */
+.info-box,
+.alert-info {
+  background: rgba(0, 102, 204, 0.05);
+  border-left: 4px solid var(--primary);
+  border-radius: 0.375rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-box,
+  .alert-info {
+    background: rgba(0, 168, 204, 0.1);
+  }
+}
+
+/* Advertencia */
+.warning-box,
+.alert-warning {
+  background: rgba(217, 119, 6, 0.05);
+  border-left: 4px solid var(--warning);
+  border-radius: 0.375rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .warning-box,
+  .alert-warning {
+    background: rgba(217, 119, 6, 0.1);
+  }
+}
+
+/* Éxito */
+.success-box,
+.alert-success {
+  background: rgba(5, 150, 105, 0.05);
+  border-left: 4px solid var(--success);
+  border-radius: 0.375rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .success-box,
+  .alert-success {
+    background: rgba(5, 150, 105, 0.1);
+  }
+}
+
+/* Peligro */
+.danger-box,
+.alert-danger {
+  background: rgba(220, 38, 38, 0.05);
+  border-left: 4px solid var(--danger);
+  border-radius: 0.375rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .danger-box,
+  .alert-danger {
+    background: rgba(220, 38, 38, 0.1);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   6. BADGES DE DIFICULTAD
+   ═══════════════════════════════════════════ */
+
+.difficulty {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+  color: white;
+}
+
+.difficulty-beginner {
+  background-color: var(--success);
+  color: white;
+  border: 1px solid var(--success);
+}
+
+.difficulty-beginner .badge-number {
+  color: #000000;
+}
+
+.difficulty-intermediate {
+  background-color: var(--warning);
+  color: white;
+  border: 1px solid var(--warning);
+}
+
+.difficulty-intermediate .badge-number {
+  color: #000000;
+}
+
+.difficulty-advanced {
+  background-color: var(--danger);
+  color: white;
+  border: 1px solid var(--danger);
+}
+
+.difficulty-advanced .badge-number {
+  color: #000000;
+}
+
+.difficulty:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Números en badges en general */
+.badge,
+[class*="badge"] span,
+[class*="count"] {
+  color: #000000 !important;
+}
+
+/* ═══════════════════════════════════════════
+   7. BADGES DE PLATAFORMA
+   ═══════════════════════════════════════════ */
+
+.platform-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  color: white;
+}
+
+.platform-tryhackme {
+  background: linear-gradient(135deg, #088395 0%, #05bfdb 100%);
+  border: 1px solid #088395;
+}
+
+.platform-hackthebox {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid #667eea;
+}
+
+.platform-ctf {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  border: 1px solid #d97706;
+}
+
+.platform-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ═══════════════════════════════════════════
+   8. TÍTULOS Y HEADINGS
+   ═══════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+h1:hover, h2:hover, h3:hover {
+  color: var(--secondary);
+}
+
+/* Línea decorativa en headings principales */
+h1 {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  margin-top: 0.5rem;
+}
+
+/* ═══════════════════════════════════════════
+   9. CÓDIGO E INLINE CODE
+   ═══════════════════════════════════════════ */
+
+code {
+  background: var(--bg-subtle);
+  color: var(--accent);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  border: 1px solid var(--border-subtle);
+}
+
+pre {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--primary);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Terminal / command blocks */
+.terminal,
+.command-block {
+  background: rgba(31, 41, 55, 0.95);
+  color: var(--secondary);
+  font-family: 'Monaco', 'Courier New', monospace;
+  padding: 1.25rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .terminal,
+  .command-block {
+    background: rgba(15, 23, 42, 0.98);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   10. CITAS Y BLOCKQUOTES
+   ═══════════════════════════════════════════ */
+
+blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+blockquote strong {
+  color: var(--primary);
+  font-style: normal;
+  font-weight: 700;
+}
+
+blockquote em {
+  color: var(--secondary);
+}
+
+/* ═══════════════════════════════════════════
+   11. TABLAS
+   ═══════════════════════════════════════════ */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+table th {
+  background: var(--primary);
+  color: white;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+table td {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.875rem 1rem;
+}
+
+table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Light mode - texto oscuro en tablas */
+@media (prefers-color-scheme: light) {
+  table td {
+    color: #000000 !important;
+  }
+  
+  table {
+    color: #000000 !important;
+  }
+}
+
+/* Dark mode - texto claro en tablas */
+@media (prefers-color-scheme: dark) {
+  table td {
+    color: #f3f4f6;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   12. TARJETAS Y POST ITEMS
+   ═══════════════════════════════════════════ */
+
+.post-item,
+.card {
+  border-left: 3px solid var(--primary);
+  transition: var(--transition);
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+.post-item:hover,
+.card:hover {
+  border-left-color: var(--secondary);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.12);
+  transform: translateX(2px);
+}
+
+/* ═══════════════════════════════════════════
+   13. TAGS Y CATEGORÍAS
+   ═══════════════════════════════════════════ */
+
+.tag,
+.category {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: 1px solid var(--primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  transition: var(--transition);
+}
+
+.tag:hover,
+.category:hover {
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════════
+   14. LÍNEAS SEPARADORAS
+   ═══════════════════════════════════════════ */
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+  margin: 2rem 0;
+}
+
+/* ═══════════════════════════════════════════
+   15. FOCUS STATES (ACCESIBILIDAD)
+   ═══════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* ═══════════════════════════════════════════
+   16. RESPONSIVE (MÓVIL)
+   ═══════════════════════════════════════════ */
+>>>>>>> Stashed changes
 
 @media (max-width: 768px) {
   .difficulty,
   .platform-badge {
+<<<<<<< Updated upstream
     display: block;
     width: fit-content;
   }
   .content pre {
-    font-size: 0.85em;
+=======
+    display: inline-block;
+    margin-bottom: 0.5rem;
   }
+
+  pre,
+  .terminal,
+  .command-block {
+>>>>>>> Stashed changes
+    font-size: 0.85em;
+    padding: 1rem;
+  }
+
+  h1::after {
+    width: 2rem;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   16.5 NAVEGACIÓN DE POSTS (OLDER/NEWER)
+   ═══════════════════════════════════════════ */
+
+/* Solo afectar a los links principales de navegación */
+.post-navigation > a {
+  color: #000000 !important;
+  text-decoration: none;
+}
+
+.post-navigation > a:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════
+   17. UTILIDADES
+   ═══════════════════════════════════════════ */
+
+/* Transiciones suaves globales */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selección de texto */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
 }
 
 /* ════════════════════════ FIN CUSTOM STYLES ════════════════════════ */
