@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-tools
-order: 6
+order: 7
 title: Recursos & Herramientas
 ---
 

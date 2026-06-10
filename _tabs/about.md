@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 Hi, I'm **Alex Guardiola**.
@@ -11,6 +11,10 @@ I'm an IT professional based in Spain, currently transitioning into
 Microsoft ecosystem (Power Platform, Power Automate, M365), and I'm
 now focused on building hands-on offensive and defensive security
 skills.
+
+Check out [my projects](/projects/) for a summary of what I'm
+building — homelab infrastructure, automation pipelines, and
+security tools.
 
 This blog is my public learning log. You'll find:
 
