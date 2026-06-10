@@ -863,25 +863,17 @@ hr {
 /* ═══════════════════════════════════════════
    16. RESPONSIVE (MÓVIL)
    ═══════════════════════════════════════════ */
->>>>>>> Stashed changes
 
 @media (max-width: 768px) {
   .difficulty,
   .platform-badge {
-<<<<<<< Updated upstream
     display: block;
     width: fit-content;
   }
-  .content pre {
-=======
-    display: inline-block;
-    margin-bottom: 0.5rem;
-  }
 
-  pre,
+  .content pre,
   .terminal,
   .command-block {
->>>>>>> Stashed changes
     font-size: 0.85em;
     padding: 1rem;
   }
