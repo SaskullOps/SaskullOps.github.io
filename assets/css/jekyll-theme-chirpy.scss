@@ -1,6 +1,10 @@
 ---
 ---
 
+/* @use debe ir primero en Sass moderno */
+/* prettier-ignore */
+@use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
+
 /* ═══════════════════════════════════════════════════════════════════
    GOOGLE FONTS  (Space Grotesk + JetBrains Mono)
    ═══════════════════════════════════════════════════════════════════ */
@@ -18,9 +22,6 @@ h1, h2, h3, h4, h5, h6 {
 code, pre, kbd, samp {
   font-family: 'JetBrains Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
 }
-
-/* prettier-ignore */
-@use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
 
 /* =====================================================================
    SASKULLOPS · CUSTOM STYLES  (Chirpy v7.x)
