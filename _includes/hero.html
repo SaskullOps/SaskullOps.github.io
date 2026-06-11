@@ -1,0 +1,179 @@
+<!--
+  SaskullOps · Homepage Hero Section
+  Brand mark + tagline + category pills + CTA
+-->
+<div class="saskull-hero">
+  <div class="saskull-hero-content">
+    <img
+      src="{{ '/assets/img/brand/saskullops-avatar-ring-512.png' | relative_url }}"
+      alt="SaskullOps"
+      class="saskull-hero-avatar"
+      width="96"
+      height="96"
+      loading="eager"
+    >
+
+    <div class="saskull-hero-tagline">
+      <span class="comment">//</span> breaking <span class="dim">·</span> building <span class="dim">·</span> automating
+    </div>
+
+    <p class="saskull-hero-sub">
+      Ciberseguridad práctica, automatización con IA y homelab.
+      Documentado en abierto mientras lo construyo.
+    </p>
+
+    <div class="saskull-hero-pills">
+      <a href="{{ '/categories/cybersecurity/' | relative_url }}" class="pill pill-cyber">CYBERSEC</a>
+      <a href="{{ '/categories/ai/' | relative_url }}" class="pill pill-ai">AI</a>
+      <a href="{{ '/categories/automation/' | relative_url }}" class="pill pill-auto">AUTOMATION</a>
+    </div>
+
+    <div class="saskull-hero-cta">
+      <a href="#post-list" class="btn btn-primary btn-sm">Explorar artículos</a>
+      <span class="saskull-hero-count">
+        {{ site.posts | size }} publicaciones
+      </span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .saskull-hero {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    position: relative;
+  }
+
+  .saskull-hero-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    box-shadow: 0 0 24px rgba(65, 224, 110, 0.25);
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .saskull-hero-avatar:hover {
+    box-shadow: 0 0 40px rgba(65, 224, 110, 0.45);
+  }
+
+  .saskull-hero-tagline {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.3px;
+  }
+
+  .saskull-hero-tagline .comment {
+    color: var(--brand-grafito);
+    font-weight: 400;
+    opacity: 0.5;
+  }
+
+  .saskull-hero-tagline .dim {
+    color: var(--brand-grafito);
+    font-weight: 300;
+  }
+
+  .saskull-hero-sub {
+    font-size: 0.95rem;
+    color: var(--brand-grafito);
+    max-width: 480px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.6;
+  }
+
+  .saskull-hero-pills {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+  }
+
+  .pill {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 1.5px solid transparent;
+  }
+
+  .pill:hover {
+    transform: translateY(-2px);
+    text-decoration: none !important;
+  }
+
+  .pill-cyber {
+    background: rgba(65, 224, 110, 0.12);
+    color: var(--brand-neon);
+    border-color: rgba(65, 224, 110, 0.25);
+  }
+  .pill-cyber:hover {
+    background: var(--brand-neon);
+    color: var(--brand-carbon);
+    box-shadow: 0 0 16px rgba(65, 224, 110, 0.3);
+  }
+
+  .pill-ai {
+    background: rgba(99, 102, 241, 0.12);
+    color: #818cf8;
+    border-color: rgba(99, 102, 241, 0.25);
+  }
+  .pill-ai:hover {
+    background: #6366f1;
+    color: #fff;
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
+  }
+
+  .pill-auto {
+    background: rgba(251, 146, 60, 0.12);
+    color: #fb923c;
+    border-color: rgba(251, 146, 60, 0.25);
+  }
+  .pill-auto:hover {
+    background: #f97316;
+    color: #fff;
+    box-shadow: 0 0 16px rgba(251, 146, 60, 0.3);
+  }
+
+  .saskull-hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .saskull-hero-cta .btn {
+    padding: 0.45rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .saskull-hero-count {
+    font-size: 0.8rem;
+    color: var(--brand-grafito);
+    opacity: 0.7;
+  }
+
+  @media (max-width: 576px) {
+    .saskull-hero {
+      padding: 1.5rem 0.5rem 1rem;
+    }
+    .saskull-hero-tagline {
+      font-size: 1.1rem;
+    }
+    .saskull-hero-sub {
+      font-size: 0.85rem;
+    }
+    .saskull-hero-avatar {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>

@@ -1,0 +1,56 @@
+<!--
+  SaskullOps · Newsletter CTA
+  Styled call-to-action box — invites readers to subscribe.
+  Brand colours via CSS custom properties (var(--brand-*)).
+-->
+<div class="newsletter-box">
+  <h3 class="newsletter-heading">¿Te ha sido útil?</h3>
+  <p class="newsletter-text">
+    Recibe contenido como este directamente en tu correo. Ciberseguridad práctica,
+    automatización con IA y homelab — sin spam.
+  </p>
+  <a href="#" class="btn btn-primary newsletter-cta-btn">Suscribirme a la newsletter</a>
+  <p class="newsletter-subtle">Una vez por semana. Sin spam. Sin compromiso.</p>
+</div>
+
+<style>
+  .newsletter-box {
+    margin: 2.5rem 0;
+    padding: 1.75rem 1.5rem;
+    border: 2px solid var(--brand-neon);
+    border-radius: 0.5rem;
+    background: color-mix(in srgb, var(--brand-neon) 6%, transparent);
+    text-align: center;
+  }
+
+  .newsletter-heading {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--heading-color, var(--brand-hueso));
+  }
+
+  .newsletter-text {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color, var(--brand-grafito));
+  }
+
+  .newsletter-cta-btn {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.55rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.35rem;
+  }
+
+  .newsletter-subtle {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    opacity: 0.65;
+    color: var(--text-color, var(--brand-grafito));
+  }
+</style>

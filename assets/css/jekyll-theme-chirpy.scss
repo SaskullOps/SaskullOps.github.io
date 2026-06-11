@@ -1,6 +1,24 @@
 ---
 ---
 
+/* ═══════════════════════════════════════════════════════════════════
+   GOOGLE FONTS  (Space Grotesk + JetBrains Mono)
+   ═══════════════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Tipografía base */
+body {
+  font-family: 'Space Grotesk', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+code, pre, kbd, samp {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', monospace;
+}
+
 /* prettier-ignore */
 @use 'main{%- if jekyll.environment == 'production' -%}.bundle{%- endif -%}';
 
@@ -117,6 +135,74 @@ a {
   --bs-btn-color: var(--brand-carbon);
   --bs-btn-hover-color: #000;
   --bs-btn-active-color: #000;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   POST SIGNATURE
+   ═══════════════════════════════════════════════════════════════════ */
+.post-signature-sep {
+  margin: 3rem 0 1.5rem;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--brand-neon) 20%,
+    var(--brand-neon) 80%,
+    transparent
+  );
+}
+
+.post-signature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.post-signature-avatar {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.post-signature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.post-signature-author {
+  font-size: 0.95rem;
+  color: var(--text-color, var(--brand-grafito));
+}
+
+.post-signature-author strong {
+  color: var(--heading-color, var(--brand-hueso));
+}
+
+.post-signature-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+.post-signature-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--link-color, var(--brand-neon));
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.post-signature-links a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.post-signature-links .svg-icon {
+  width: 16px;
+  height: 16px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════

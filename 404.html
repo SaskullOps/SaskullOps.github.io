@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<style>
+  .error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem 4rem;
+    min-height: 60vh;
+  }
+
+  .error-page .error-avatar {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    box-shadow:
+      0 0 20px rgba(0, 255, 170, 0.25),
+      0 0 60px rgba(0, 255, 170, 0.10);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .error-page .error-avatar:hover {
+    box-shadow:
+      0 0 30px rgba(0, 255, 170, 0.45),
+      0 0 80px rgba(0, 255, 170, 0.20);
+  }
+
+  .error-page h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00ffaa, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .error-page .glitch-sub {
+    font-size: 0.9rem;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    color: var(--text-muted-color, #8899aa);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .error-page .error-message {
+    font-size: 1.2rem;
+    color: var(--text-color, #ddd);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .error-page .btn-primary {
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00ffaa, #00ccff);
+    border: none;
+    color: #0d1117;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.30);
+  }
+
+  .error-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.55);
+    background: linear-gradient(135deg, #00ffbb, #00ddff);
+    color: #0d1117;
+  }
+
+  .error-page .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .error-page .ascii-art {
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.65rem;
+    line-height: 1.2;
+    color: var(--text-muted-color, #556677);
+    margin-bottom: 1.5rem;
+    white-space: pre;
+    opacity: 0.6;
+    user-select: none;
+  }
+</style>
+
+<div class="error-page">
+  <div class="ascii-art">
+    ╔═══╗╔═══╗╔═══╗
+    ╚══╗║║╔═╗║║╔═╗║
+    ╔══╝║║╚═╝║║╚═╝║
+    ╚═══╝╚═══╝╚═══╝
+  </div>
+
+  <img
+    src="/assets/img/brand/saskullops-avatar-ring-512.png"
+    alt="SaskullOps Avatar"
+    class="error-avatar"
+    loading="lazy"
+  >
+
+  <h1>404</h1>
+  <p class="glitch-sub">— Página no encontrada —</p>
+
+  <p class="error-message">
+    Parece que has llegado a un lugar que no existe…
+    <br>
+    El enlace podría estar roto o la página ha sido movida.
+  </p>
+
+  <a href="{{ '/' | relative_url }}" class="btn btn-primary">
+    Volver al inicio
+  </a>
+</div>
