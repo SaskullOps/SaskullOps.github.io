@@ -8,9 +8,9 @@
    SASKULLOPS · CUSTOM STYLES  (Chirpy v7.x)
    ---------------------------------------------------------------------
    Paleta de marca:
-     — NEON   (#00FF88) → primario (enlaces, títulos, acentos)
-     — CARBON (#0A0E17) → fondo dark mode, fondos sólidos
-     — HUESO  (#F5F0E8) → fondo light mode, texto sobre carbon
+     — NEON   (#41E06E) → primario (enlaces, títulos, acentos)
+     — CARBON (#0A0C0B) → fondo dark mode, fondos sólidos
+     — HUESO  (#E9EFE7) → fondo light mode, texto sobre carbon
      — GRAFITO(#6B7280) → texto secundario, bordes, sutilezas
    ===================================================================== */
 
@@ -19,10 +19,10 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 @mixin saskull-light {
-  --brand-neon: #00CC6A;
-  --brand-neon-strong: #009E52;
-  --brand-carbon: #1A1D23;
-  --brand-hueso: #F5F0E8;
+  --brand-neon: #41E06E;
+  --brand-neon-strong: #2DB85B;
+  --brand-carbon: #0A0C0B;
+  --brand-hueso: #E9EFE7;
   --brand-grafito: #6B7280;
 
   --link-color: var(--brand-neon-strong);
@@ -51,10 +51,10 @@
 }
 
 @mixin saskull-dark {
-  --brand-neon: #00FF88;
-  --brand-neon-strong: #00CC6A;
-  --brand-carbon: #0A0E17;
-  --brand-hueso: #F5F0E8;
+  --brand-neon: #41E06E;
+  --brand-neon-strong: #36C662;
+  --brand-carbon: #0A0C0B;
+  --brand-hueso: #E9EFE7;
   --brand-grafito: #8B95A5;
 
   --link-color: var(--brand-neon);

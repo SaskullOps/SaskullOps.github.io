@@ -80,10 +80,10 @@ theme_mode:                 # permite toggle automático dark/light
 cdn:                        # Dejar vacío
 
 # the avatar on sidebar
-avatar: /assets/MyRetrato.jpg
+avatar: /assets/img/brand/saskullops-avatar-ring-512.png
 
 # The URL of the site-wide social preview image
-social_preview_image:       # Dejalo vacío por ahora
+social_preview_image: /assets/img/brand/saskullops-banner.png
 
 # boolean type, the global switch for TOC in posts
 toc: true                   # Tabla de contenidos habilitada
