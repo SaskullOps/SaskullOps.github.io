@@ -5,9 +5,10 @@ order: 6
 title: Now
 ---
 
-**Last updated: June 2026**
+**Last updated: July 2026**
 
 ### Building
+- **QRFleet** — fleet damage reporting app for RB Logistics (Next.js, FastAPI, Docker, Supabase). Live at qrfleet.com
 - Expanding the **Home SOC Lab** — adding custom Wazuh rules and active response for SSH brute force
 - Newsletter image pipeline with **Bannerbear** + n8n automation
 - Writing up more **TryHackMe** rooms and tackling **HackTheBox** machines

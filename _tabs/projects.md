@@ -57,6 +57,18 @@ Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in
 
 ---
 
+## QRFleet — Fleet Damage Reporting
+
+**Stack:** Next.js · FastAPI · PostgreSQL · Docker · Supabase · Hetzner VPS
+
+A corporate app for RB Logistics that digitises the entire vehicle damage reporting workflow. Drivers scan QR codes on fleet vehicles, submit photos and descriptions of damage, and the report lands instantly in a dashboard for management review. No paper, no WhatsApp photos, no back-and-forth.
+
+Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack — database, API, frontend, email templates, deployment config, and Supabase bucket migration.
+
+Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
+
+---
+
 ## CTF Write-up Series
 
 **Platforms:** TryHackMe · HackTheBox
