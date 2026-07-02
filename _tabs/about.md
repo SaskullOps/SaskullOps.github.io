@@ -6,29 +6,29 @@ order: 5
 
 Hi, I'm **Alex Guardiola**.
 
-I'm an IT professional based in Spain, currently transitioning into
-**cybersecurity**. My background is in business automation and the
-Microsoft ecosystem (Power Platform, Power Automate, M365), and I'm
-now focused on building hands-on offensive and defensive security
-skills.
+I work in IT at **RB Logistics** in Spain — business automation,
+Microsoft ecosystem (Power Platform, Power Automate, M365), and
+keeping the fleet's tech running.
 
-Check out [my projects](/projects/) for a summary of what I'm
-building — homelab infrastructure, automation pipelines, and
-security tools.
+Outside work I study cybersecurity as a side interest. Homelab
+experiments, CTFs, and building my own SOC with Wazuh — nothing
+professional, just curiosity and a want to understand how things
+break.
+
+Check out [my projects](/projects/) for what I'm building: homelab
+infrastructure, automation pipelines, and security tools.
 
 This blog is my public learning log. You'll find:
 
 - **Write-ups** of rooms and machines from TryHackMe, HackTheBox,
   and other CTF platforms.
-- **Notes** on tools, techniques, and concepts I'm learning —
+- **Notes** on tools, techniques, and concepts I'm picking up —
   written so my future self (and hopefully you) can follow along.
-- **Reflections** on what's clicked, what hasn't, and how I'm
-  navigating a career change into security.
+- **Projects** I build in my homelab that are worth sharing.
 
-I'm not an expert. I'm a learner publishing in the open because
-that's how I learn fastest and how I plan to break into the field.
-If you spot mistakes, have feedback, or want to talk shop, reach
-out — I'm always up for it.
+I'm not an expert. I'm someone who learns by doing and publishes
+in the open because that's how I learn best. If you spot mistakes
+or want to talk shop, reach out — I'm always up for it.
 
 ### Currently learning
 
