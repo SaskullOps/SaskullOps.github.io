@@ -3,7 +3,6 @@ title: Power Platform in logistics — What I learned going from operations to I
 date: 2026-07-03 00:00:00 +0200
 categories: [Automatización, Aprendizaje]
 tags: [power-bi, power-automate, power-apps, sql, logistics, career]
-image: /assets/img/posts/power-platform-cover.png
 ---
 
 I started in operations — loading docks, schedules, the daily chaos of freight movement. When I moved into IT, I knew the problems intimately. That made the tools easy to choose.
