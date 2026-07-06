@@ -37,7 +37,7 @@ Skills are reusable markdown files that teach the agent how to do things. Each o
 
 I've built skills for my environment:
 
-- **pi-server** — SSH into the Raspberry Pi (192.168.1.59), inspect Docker services, check disk and memory usage, restart containers
+- **pi-server** — SSH into the Raspberry Pi, inspect Docker services, check disk and memory usage, restart containers
 - **obsidian** — Read, search, create, and edit notes in my vault with proper folder structure
 - **virt-manager** — Manage KVM/libvirt VMs on the tower — inspect, start/stop, troubleshoot video issues
 - **shell** — Execute local commands with the right conventions for CachyOS (Arch-based)
