@@ -6,36 +6,44 @@ order: 5
 
 Hi, I'm **Alex Guardiola**.
 
-I work in IT at **RB Logistics** in Spain — business automation,
-Microsoft ecosystem (Power Platform, Power Automate, M365), and
-keeping the fleet's tech running.
+I work in IT at **RB Logistics** in Spain, where my job is finding
+where automation and AI actually earn their place across the stack:
+Microsoft Power Platform and M365, Oracle SQL and BI reporting,
+n8n workflows, and a growing homelab that doubles as a testbed.
+Right now that means wiring AI into Oracle SQL/BI reporting at
+work, and running self-hosted LLM pipelines (Ollama, OpenRouter,
+n8n) at home.
 
-Outside work I study cybersecurity as a side interest. Homelab
-experiments, CTFs, and building my own SOC with Wazuh — nothing
-professional, just curiosity and a want to understand how things
-break.
+I'm extending that same instinct — automate it, then make it
+smarter — into cybersecurity: a home SOC built on Wazuh, CTFs on
+TryHackMe and HackTheBox, and studying offense to build better
+defenses. Not a career pivot away from IT, more like the next tool
+in the same toolbox: understanding how systems break makes the
+automation and AI I build around them more resilient.
 
-Check out [my projects](/projects/) for what I'm building: homelab
-infrastructure, automation pipelines, and security tools.
+Check out [my projects](/projects/) for what I'm building: production
+apps, automation pipelines, AI agents, and a home SOC.
 
 This blog is my public learning log. You'll find:
 
+- **Notes** on applying AI and automation across M365, Power
+  Platform, n8n, and BI/data workflows.
 - **Write-ups** of rooms and machines from TryHackMe, HackTheBox,
   and other CTF platforms.
-- **Notes** on tools, techniques, and concepts I'm picking up —
-  written so my future self (and hopefully you) can follow along.
-- **Projects** I build in my homelab that are worth sharing.
+- **Projects** — from production tools like QRFleet to homelab
+  experiments worth sharing.
 
-I'm not an expert. I'm someone who learns by doing and publishes
-in the open because that's how I learn best. If you spot mistakes
-or want to talk shop, reach out — I'm always up for it.
+I learn by doing and publish in the open because that's how it
+sticks. If you spot mistakes or want to talk shop, reach out —
+I'm always up for it.
 
-### Currently learning
+### Currently focused on
 
-- Linux fundamentals and CLI fluency
-- Networking basics (TCP/IP, DNS, HTTP, common protocols)
-- Web application security
-- Defensive operations and SOC workflows
+- Applying AI to Oracle SQL / BI reporting workflows
+- Automation and AI agents beyond chat — n8n, Ollama, OpenRouter
+- Web application security and SOC operations (alert triage,
+  incident response)
+- Active Directory and network fundamentals for attack-path thinking
 
 ### Find me elsewhere
 

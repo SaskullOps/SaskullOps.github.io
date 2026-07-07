@@ -67,6 +67,8 @@ Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation w
 
 Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
 
+[Live site →](https://qrfleet.com)
+
 ---
 
 ## CTF Write-up Series

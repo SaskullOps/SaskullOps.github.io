@@ -15,13 +15,13 @@ timezone: Europe/Madrid
 
 title: "SaskullOps"
 
-tagline: "Cybersec | Automate | AI"
+tagline: "Automate | AI | Cybersec"
 
 description: >-
-  Blog personal de Alex Guardiola: write-ups de ciberseguridad,
-  apuntes técnicos y reflexiones sobre la transición desde el
-  ecosistema Microsoft (Power Platform, M365) hacia el mundo
-  infosec. CTFs, lab notes y aprendizaje en abierto.
+  Blog personal de Alex Guardiola: cómo aplico IA y automatización
+  en IT — Microsoft Power Platform y M365, n8n, Oracle SQL/BI — y
+  cómo extiendo esa misma mentalidad a ciberseguridad defensiva
+  (SOC casero, CTFs). Apuntes técnicos y aprendizaje en abierto.
 
 # Fill in the protocol & hostname for your site.
 url: "https://saskullops.github.io"    
