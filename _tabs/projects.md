@@ -5,25 +5,27 @@ order: 4
 title: Projects
 ---
 
-## Home SOC Lab
+## QRFleet — Fleet Damage Reporting
 
-**Stack:** Wazuh · Docker · OpenSearch · Linux · MITRE ATT&CK
+**Stack:** Next.js · FastAPI · PostgreSQL · Docker · Supabase · Hetzner VPS
 
-A working SIEM/XDR deployment running on my home network. Wazuh server on a desktop with agents deployed across a Raspberry Pi server, laptop, and other devices. Collects real logs, maps alerts to MITRE ATT&CK techniques, monitors file integrity, and scans for CVEs.
+A corporate app for RB Logistics that digitises the entire vehicle damage reporting workflow. Drivers scan QR codes on fleet vehicles, submit photos and descriptions of damage, and the report lands instantly in a dashboard for management review. No paper, no WhatsApp photos, no back-and-forth.
 
-What I learned from this project goes beyond the install guide — version mismatches that silently block agent registration, certificate generation quirks, and the difference between reading about SIEM and actually triaging alerts from your own network traffic.
+Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack — database, API, frontend, email templates, deployment config, and Supabase bucket migration.
 
-[Full write-up →](/posts/home-soc-wazuh-homelab/)
+Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
+
+[Live site →](https://qrfleet.com)
 
 ---
 
-## Automated Security News Briefing
+## Personal AI Agent Infrastructure
 
-**Stack:** n8n · Ollama (llama3.1) · Telegram API · RSS
+**Stack:** Hermes Agent (Nous Research) · OpenRouter · Ollama · Custom Skills
 
-An n8n workflow that collects the day's cybersecurity headlines from three sources (The Hacker News, Bleeping Computer, Krebs on Security), runs them through a local LLM for summarization, and delivers a curated briefing to a private Telegram channel every morning. No external AI API costs — everything runs locally on Ollama.
+A CLI-based AI assistant integrated into my workflow that goes beyond chat. Manages cron jobs, SSHes into servers, queries APIs, reads and writes to an Obsidian vault, and runs system diagnostics — all through natural language. Uses a multi-model setup: lightweight local models for routine tasks via Ollama, and routed reasoning through OpenRouter for complex analysis.
 
-This was my first real n8n project and it forced me to think about error handling, rate limiting, and formatting output for a messaging platform in a way that a script wouldn't.
+Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in.
 
 ---
 
@@ -47,27 +49,25 @@ This is the kind of project that doesn't have a single finished moment — it ev
 
 ---
 
-## Personal AI Agent Infrastructure
+## Automated Security News Briefing
 
-**Stack:** Hermes Agent (Nous Research) · OpenRouter · Ollama · Custom Skills
+**Stack:** n8n · Ollama (llama3.1) · Telegram API · RSS
 
-A CLI-based AI assistant integrated into my workflow that goes beyond chat. Manages cron jobs, SSHes into servers, queries APIs, reads and writes to an Obsidian vault, and runs system diagnostics — all through natural language. Uses a multi-model setup: lightweight local models for routine tasks via Ollama, and routed reasoning through OpenRouter for complex analysis.
+An n8n workflow that collects the day's cybersecurity headlines from three sources (The Hacker News, Bleeping Computer, Krebs on Security), runs them through a local LLM for summarization, and delivers a curated briefing to a private Telegram channel every morning. No external AI API costs — everything runs locally on Ollama.
 
-Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in.
+This was my first real n8n project and it forced me to think about error handling, rate limiting, and formatting output for a messaging platform in a way that a script wouldn't.
 
 ---
 
-## QRFleet — Fleet Damage Reporting
+## Home SOC Lab
 
-**Stack:** Next.js · FastAPI · PostgreSQL · Docker · Supabase · Hetzner VPS
+**Stack:** Wazuh · Docker · OpenSearch · Linux · MITRE ATT&CK
 
-A corporate app for RB Logistics that digitises the entire vehicle damage reporting workflow. Drivers scan QR codes on fleet vehicles, submit photos and descriptions of damage, and the report lands instantly in a dashboard for management review. No paper, no WhatsApp photos, no back-and-forth.
+A personal-interest project on the side: a working SIEM/XDR deployment running on my home network. Wazuh server on a desktop with agents deployed across a Raspberry Pi server, laptop, and other devices. Collects real logs, maps alerts to MITRE ATT&CK techniques, monitors file integrity, and scans for CVEs.
 
-Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack — database, API, frontend, email templates, deployment config, and Supabase bucket migration.
+What I learned from this project goes beyond the install guide — version mismatches that silently block agent registration, certificate generation quirks, and the difference between reading about SIEM and actually triaging alerts from your own network traffic.
 
-Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
-
-[Live site →](https://qrfleet.com)
+[Full write-up →](/posts/home-soc-wazuh-homelab/)
 
 ---
 
@@ -75,6 +75,6 @@ Probably the most complete web app I've built. It does one thing (damage reporti
 
 **Platforms:** TryHackMe · HackTheBox
 
-A growing collection of penetration testing write-ups covering everything from EternalBlue (MS17-010) exploitation to Linux privilege escalation via SUID path hijacking. Each write-up documents the full kill chain — recon, exploitation, post-exploitation, and the thinking behind each decision.
+A handful of penetration testing write-ups I publish when I feel like it, covering everything from EternalBlue (MS17-010) exploitation to Linux privilege escalation via SUID path hijacking. Each write-up documents the full kill chain — recon, exploitation, post-exploitation, and the thinking behind each decision.
 
 [Browse write-ups →](/categories/ctf/)

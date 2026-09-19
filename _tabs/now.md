@@ -10,21 +10,18 @@ title: Now
 ### Building
 - **QRFleet** — fleet damage reporting app for RB Logistics (Next.js, FastAPI, Docker, Supabase). Live at [qrfleet.com](https://qrfleet.com)
 - **AI in Oracle SQL / BI** — at work, wiring AI assistance into SQL reporting workflows and exploring where it actually saves time vs. adds noise
-- Expanding the **Home SOC Lab** — adding custom Wazuh rules and active response for SSH brute force
 - Newsletter image pipeline with **Bannerbear** + n8n automation
-- Writing up more **TryHackMe** rooms and tackling **HackTheBox** machines
+- On the side: expanding the **Home SOC Lab** and picking off occasional **TryHackMe**/**HackTheBox** rooms
 
 ### Learning
-- Where AI fits (and doesn't) across the IT stack — BI/data, Power Platform, security ops
+- Where AI fits (and doesn't) across the IT stack — BI/data, Power Platform, automation
 - Linux internals and system administration (digging deeper than CLI basics)
-- SOC operations workflows — alert triage, incident response procedures
-- Web application security (burp, SQLi, XSS methodology)
+- Web application security basics, as a side interest
 
 ### Reading
-- *The Web Application Hacker's Handbook* — working through it systematically
-- Security blogs and write-ups, daily feed via my own briefing bot
+- *The Web Application Hacker's Handbook* — working through it on and off, for the security side-project
+- Daily security headlines via my own n8n + local-LLM briefing bot — half reading, half admiring my own automation
 
 ### Planning
-- Active Directory lab for attack path simulation
-- Threat hunting exercises on my own network logs
-- Getting my first cert — OSCP or BTL1 depending on how the year goes
+- More AI-assisted reporting workflows at work
+- Maybe an OSCP/BTL1 attempt eventually, mostly for the challenge — no fixed timeline
