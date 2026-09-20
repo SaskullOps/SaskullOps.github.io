@@ -5,13 +5,13 @@ order: 4
 title: Projects
 ---
 
-## QRFleet — Fleet Damage Reporting
+## QRFleet: Fleet Damage Reporting
 
 **Stack:** Next.js · FastAPI · PostgreSQL · Docker · Supabase · Hetzner VPS
 
 A corporate app for RB Logistics that digitises the entire vehicle damage reporting workflow. Drivers scan QR codes on fleet vehicles, submit photos and descriptions of damage, and the report lands instantly in a dashboard for management review. No paper, no WhatsApp photos, no back-and-forth.
 
-Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack — database, API, frontend, email templates, deployment config, and Supabase bucket migration.
+Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack: database, API, frontend, email templates, deployment config, and Supabase bucket migration.
 
 Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
 
@@ -23,7 +23,7 @@ Probably the most complete web app I've built. It does one thing (damage reporti
 
 **Stack:** Hermes Agent (Nous Research) · OpenRouter · Ollama · Custom Skills
 
-A CLI-based AI assistant integrated into my workflow that goes beyond chat. Manages cron jobs, SSHes into servers, queries APIs, reads and writes to an Obsidian vault, and runs system diagnostics — all through natural language. Uses a multi-model setup: lightweight local models for routine tasks via Ollama, and routed reasoning through OpenRouter for complex analysis.
+A CLI-based AI assistant integrated into my workflow that goes beyond chat. Manages cron jobs, SSHes into servers, queries APIs, reads and writes to an Obsidian vault, and runs system diagnostics, all through natural language. Uses a multi-model setup: lightweight local models for routine tasks via Ollama, and routed reasoning through OpenRouter for complex analysis.
 
 Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in.
 
@@ -33,7 +33,7 @@ Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in
 
 **Stack:** Bannerbear API · n8n · Dynamic Templates
 
-An automated pipeline that generates branded newsletter images using Bannerbear's template API. Three templates (news, tips, alerts) with a cyberpunk aesthetic — dark background, green/cyan terminal-style typography, dynamic fields for headlines, categories, and descriptions.
+An automated pipeline that generates branded newsletter images using Bannerbear's template API. Three templates (news, tips, alerts) with a cyberpunk aesthetic: dark background, green/cyan terminal-style typography, dynamic fields for headlines, categories, and descriptions.
 
 Handles text rendering, image composition, and webhook callbacks for delivery status. Designed to integrate with a content workflow for automated social media posting.
 
@@ -45,7 +45,7 @@ Handles text rendering, image composition, and webhook callbacks for delivery st
 
 A Raspberry Pi running 14+ Docker services that forms the backbone of my home automation and development infrastructure. Includes self-hosted Git (Gitea), password management (Vaultwarden), workflow automation (n8n), monitoring (Portainer), reverse proxy with auto SSL, and more.
 
-This is the kind of project that doesn't have a single finished moment — it evolves every time I find a new service worth self-hosting or hit a limitation that needs a workaround.
+This is the kind of project that doesn't have a single finished moment. It evolves every time I find a new service worth self-hosting or hit a limitation that needs a workaround.
 
 ---
 
@@ -53,7 +53,7 @@ This is the kind of project that doesn't have a single finished moment — it ev
 
 **Stack:** n8n · Ollama (llama3.1) · Telegram API · RSS
 
-An n8n workflow that collects the day's cybersecurity headlines from three sources (The Hacker News, Bleeping Computer, Krebs on Security), runs them through a local LLM for summarization, and delivers a curated briefing to a private Telegram channel every morning. No external AI API costs — everything runs locally on Ollama.
+An n8n workflow that collects the day's cybersecurity headlines from three sources (The Hacker News, Bleeping Computer, Krebs on Security), runs them through a local LLM for summarization, and delivers a curated briefing to a private Telegram channel every morning. No external AI API costs, everything runs locally on Ollama.
 
 This was my first real n8n project and it forced me to think about error handling, rate limiting, and formatting output for a messaging platform in a way that a script wouldn't.
 
@@ -65,7 +65,7 @@ This was my first real n8n project and it forced me to think about error handlin
 
 A personal-interest project on the side: a working SIEM/XDR deployment running on my home network. Wazuh server on a desktop with agents deployed across a Raspberry Pi server, laptop, and other devices. Collects real logs, maps alerts to MITRE ATT&CK techniques, monitors file integrity, and scans for CVEs.
 
-What I learned from this project goes beyond the install guide — version mismatches that silently block agent registration, certificate generation quirks, and the difference between reading about SIEM and actually triaging alerts from your own network traffic.
+What I learned from this project goes beyond the install guide: version mismatches that silently block agent registration, certificate generation quirks, and the difference between reading about SIEM and actually triaging alerts from your own network traffic.
 
 [Full write-up →](/posts/home-soc-wazuh-homelab/)
 
@@ -75,6 +75,6 @@ What I learned from this project goes beyond the install guide — version misma
 
 **Platforms:** TryHackMe · HackTheBox
 
-A handful of penetration testing write-ups I publish when I feel like it, covering everything from EternalBlue (MS17-010) exploitation to Linux privilege escalation via SUID path hijacking. Each write-up documents the full kill chain — recon, exploitation, post-exploitation, and the thinking behind each decision.
+A handful of penetration testing write-ups I publish when I feel like it, covering everything from EternalBlue (MS17-010) exploitation to Linux privilege escalation via SUID path hijacking. Each write-up documents the full kill chain: recon, exploitation, post-exploitation, and the thinking behind each decision.
 
 [Browse write-ups →](/categories/ctf/)

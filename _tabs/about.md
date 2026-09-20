@@ -13,9 +13,9 @@ scripting. Lately that means wiring AI assistance into BI reporting
 at work, and running self-hosted LLM pipelines (Ollama, OpenRouter,
 n8n) at home.
 
-I also tinker with cybersecurity on the side — a home SOC on Wazuh,
-CTFs on TryHackMe and HackTheBox — personal interest, not the main
-gig.
+I also tinker with cybersecurity on the side (a home SOC on Wazuh,
+CTFs on TryHackMe and HackTheBox), just as a personal interest, not
+the main gig.
 
 This blog is my public learning log: notes on automation and AI,
 projects like QRFleet, and the occasional CTF write-up. Check out
@@ -23,8 +23,8 @@ projects like QRFleet, and the occasional CTF write-up. Check out
 [CV](/assets/files/CV-Alex-Guardiola.pdf) for the short version.
 
 I learn by doing and publish in the open because that's how it
-sticks. If you spot mistakes or want to talk shop, reach out —
-I'm always up for it.
+sticks. If you spot mistakes or want to talk shop, reach out. I'm
+always up for it.
 
 ### Find me elsewhere
 
