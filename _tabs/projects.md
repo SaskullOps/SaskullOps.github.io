@@ -29,13 +29,13 @@ Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in
 
 ---
 
-## Newsletter Image Generation Pipeline
+## Image Generation Pipeline
 
-**Stack:** Bannerbear API · n8n · Dynamic Templates
+**Stack:** Python · HTML/CSS · Chromium · n8n webhook
 
-An automated pipeline that generates branded newsletter images using Bannerbear's template API. Three templates (news, tips, alerts) with a cyberpunk aesthetic: dark background, green/cyan terminal-style typography, dynamic fields for headlines, categories, and descriptions.
+A local generator for newsletter headers, LinkedIn images and carousel slides. Python fills HTML templates and Chromium renders them to PNG. I can change the layouts in CSS rather than editing hosted templates. There's an HTTP endpoint for n8n to request images, but the output still gets a manual review before I use it.
 
-Handles text rendering, image composition, and webhook callbacks for delivery status. Designed to integrate with a content workflow for automated social media posting.
+[How I built it →](/posts/building-my-own-image-generator/)
 
 ---
 
