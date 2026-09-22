@@ -6,25 +6,13 @@ order: 5
 
 Hi, I'm **Alex Guardiola**.
 
-I work in IT at **RB Logistics** in Spain, building process
-automation and integrations: Microsoft Power Platform and M365,
-Oracle SQL and Power BI reporting, n8n workflows, and Python
-scripting. Lately that means wiring AI assistance into BI reporting
-at work, and running self-hosted LLM pipelines (Ollama, OpenRouter,
-n8n) at home.
+I work in IT, mainly on automation, reporting and integrations. My day-to-day work involves Microsoft Power Platform, SQL, Power BI and M365. I also use Python and n8n to build tools and connect systems where they make sense.
 
-I also tinker with cybersecurity on the side (a home SOC on Wazuh,
-CTFs on TryHackMe and HackTheBox), just as a personal interest, not
-the main gig.
+Lately I've been exploring where AI assistance helps with reporting and IT workflows, and where a regular script does the job better. I learn most by building things and seeing what breaks.
 
-This blog is my public learning log: notes on automation and AI,
-projects like QRFleet, and the occasional CTF write-up. Check out
-[my projects](/projects/) for what I'm building, or grab my
-[CV](/assets/files/CV-Alex-Guardiola.pdf) for the short version.
+This site is where I write about those projects. You'll find QRFleet, the web app I built for fleet damage reporting, alongside my homelab and smaller automation projects. I try to explain what I built and the decisions behind it without dressing it up.
 
-I learn by doing and publish in the open because that's how it
-sticks. If you spot mistakes or want to talk shop, reach out. I'm
-always up for it.
+You can browse [my projects](/projects/) or read the posts on the homepage.
 
 ### Find me elsewhere
 
