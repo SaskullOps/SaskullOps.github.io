@@ -27,6 +27,8 @@ A CLI-based AI assistant integrated into my workflow that goes beyond chat. Mana
 
 Built entirely on open-source tooling. No cloud subscriptions, no vendor lock-in.
 
+[How I route coding requests →](/posts/hermes-openrouter-pareto-code/)
+
 ---
 
 ## Image Generation Pipeline
