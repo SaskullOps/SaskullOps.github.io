@@ -6,6 +6,9 @@ tags: [fastapi, next.js, docker, postgresql, qrfleet, supabase]
 image: /assets/img/posts/qrfleet-cover.png
 ---
 
+> This is an early project overview, not a current technical reference. The architecture, inspection workflow and deployment have changed since it was written. See [QRFleet's current stack](/posts/qrfleet-stack-from-qr-to-inspection/) for the updated implementation.
+{: .prompt-info }
+
 ## The problem
 
 Drivers reporting damage via WhatsApp. Photos lost in the chat, descriptions misunderstood, no traceability. Management needing a dashboard that didn't exist.
@@ -79,9 +82,8 @@ Token rotation every 15 minutes, refresh tokens with 7-day expiry. Stored in htt
 - **Add request logging earlier.** I added structured logging (request ID, duration, endpoint, user) after the first bug hunt. Should have been there from the start.
 - **Better error messages on the frontend.** "Something went wrong" is useless. Now every API error returns a user-facing message in the correct language.
 
-## The repo
+## Current architecture
 
-The codebase is open on GitHub. It's not perfect — there are things I'd refactor — but it works, it's in production, and drivers use it daily.
+The repository is private. The newer [architecture write-up](/posts/qrfleet-stack-from-qr-to-inspection/) covers the current stack and inspection flow.
 
-[GitHub — SaskullOps/rb-hub](https://github.com/SaskullOps/rb-hub)
 [Live — qrfleet.com](https://qrfleet.com)

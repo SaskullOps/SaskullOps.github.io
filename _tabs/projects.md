@@ -5,17 +5,15 @@ order: 4
 title: Projects
 ---
 
-## QRFleet: Fleet Damage Reporting
+## QRFleet: Fleet Inspections and Damage Reporting
 
-**Stack:** Next.js · FastAPI · PostgreSQL · Docker · Supabase · Hetzner VPS
+**Stack:** Next.js · TypeScript · FastAPI · PostgreSQL · Supabase · Docker · Caddy · Hetzner
 
-A corporate app for RB Logistics that digitises the entire vehicle damage reporting workflow. Drivers scan QR codes on fleet vehicles, submit photos and descriptions of damage, and the report lands instantly in a dashboard for management review. No paper, no WhatsApp photos, no back-and-forth.
+A web application for fleet inspections and damage reporting. An asset scan leads into a checklist with damage observations, photos and signatures. The API checks the completed inspection and stores its PDF record. The interface supports mobile and desktop workflows in five languages.
 
-Built from scratch with a bilingual (ES/EN) interface, JWT auth, QR generation with deep linking, and a Supabase-backed photo storage pipeline. Deployed on a Hetzner VPS with Docker Compose. The full rebrand from RB Hub to QRFleet included renaming across the entire stack: database, API, frontend, email templates, deployment config, and Supabase bucket migration.
+Built with a separate Python API, a browser-side offline write queue and managed database/object storage in Supabase. Docker Compose runs the application on a Hetzner VPS behind Caddy and Cloudflare. The offline queue persists pending work in IndexedDB and synchronizes it when the connection returns; the server still validates the final result.
 
-Probably the most complete web app I've built. It does one thing (damage reporting) and does it well enough that a real logistics company uses it daily.
-
-[Live site →](https://qrfleet.com)
+[Architecture and stack →](/posts/qrfleet-stack-from-qr-to-inspection/) · [Live site →](https://qrfleet.com)
 
 ---
 
