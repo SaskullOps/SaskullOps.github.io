@@ -5,6 +5,9 @@ categories: [Homelab, Automatización]
 tags: [n8n, grocy, tandoor, telegram, openrouter, raspberry-pi, docker, homelab, ai]
 description: "How a Telegram group, Grocy, Tandoor and a generated n8n workflow became a self-hosted kitchen assistant: receipts to stock, weekly menus to shopping lists."
 mermaid: true
+image:
+  path: /assets/img/posts/kitchen-assistant-cover.png
+  alt: A kitchen assistant for two on a Raspberry Pi
 ---
 
 We were throwing food away and still arriving at Thursday without knowing what to cook. The shopping list lived in a notes app, the pantry lived in my head, and every week started with the same negotiation about what to eat.
