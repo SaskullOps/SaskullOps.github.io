@@ -10,7 +10,6 @@ tags:
   - career
   - learning
   - cybersecurity
-pin: true
 ---
 
 This is the first post, so let me explain what this place is for.
