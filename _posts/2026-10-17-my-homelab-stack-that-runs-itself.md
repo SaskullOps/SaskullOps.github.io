@@ -6,7 +6,7 @@ tags: [homelab, raspberry-pi, docker, tailscale, backups, kopia, wazuh, crowdsec
 description: "How a Raspberry Pi and a desktop became a self-monitoring homelab: VPN-only access, a daily doctor script, 3-2-1 backups with a tested restore, and controlled updates, plus the incidents that taught me the most."
 mermaid: true
 image:
-  path: /assets/img/posts/homelab-stack-cover.png
+  path: /assets/img/posts/homelab-stack-cover-v2.png
   alt: The SaskullOps homelab dashboard
 ---
 
