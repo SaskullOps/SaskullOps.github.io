@@ -4,3 +4,16 @@
 -->
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E9EFE7">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A0C0B">
+
+<!--
+  Mermaid render fallback: mermaid's startOnLoad waits for the window "load" event,
+  which never fires while a third-party script (e.g. the comments widget) hangs.
+  Render pending diagrams as soon as the DOM and the deferred scripts are ready.
+-->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof mermaid === 'undefined' || typeof mermaid.run !== 'function') return;
+    var pending = document.querySelectorAll('pre.mermaid:not([data-processed])');
+    if (pending.length) mermaid.run({ nodes: pending });
+  });
+</script>
