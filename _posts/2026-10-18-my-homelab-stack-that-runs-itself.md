@@ -5,6 +5,9 @@ categories: [Homelab, Infraestructura]
 tags: [homelab, raspberry-pi, docker, tailscale, backups, kopia, wazuh, crowdsec, renovate, healthchecks, security]
 description: "How a Raspberry Pi and a desktop became a self-monitoring homelab: VPN-only access, a daily doctor script, 3-2-1 backups with a tested restore, and controlled updates, plus the incidents that taught me the most."
 mermaid: true
+image:
+  path: /assets/img/posts/homelab-stack-cover.png
+  alt: The SaskullOps homelab dashboard
 ---
 
 For a long time my homelab worked in the worst possible way: it worked. Containers ran, dashboards loaded, and I assumed everything was fine because nothing was screaming. Then I started asking uncomfortable questions. When did the last backup actually succeed? Which of my automations has been failing for a week? What happens if the SD card dies tonight?
@@ -150,6 +153,9 @@ Watchtower is on its way out. I did not delete it the moment the new pipeline wo
 ## The dashboard
 
 Homepage is the front door, themed with my own brand. Every service has a card, and there is a Renovate card showing pending PRs. The doctor even checks that a running service has a card, so the dashboard cannot quietly fall behind reality.
+
+![The SaskullOps homelab dashboard built with Homepage](/assets/img/posts/homelab-stack-dashboard.png){: width="1200" }
+_Every service has a card; the Healthchecks and Renovate cards show live status and pending updates._
 
 ## How I work with an AI agent
 
