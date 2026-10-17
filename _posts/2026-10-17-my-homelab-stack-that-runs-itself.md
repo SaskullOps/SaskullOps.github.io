@@ -1,6 +1,6 @@
 ---
 title: "A homelab that runs itself: monitoring, backups and updates on a Raspberry Pi"
-date: 2026-10-18 10:00:00 +0200
+date: 2026-10-17 10:00:00 +0200
 categories: [Homelab, Infraestructura]
 tags: [homelab, raspberry-pi, docker, tailscale, backups, kopia, wazuh, crowdsec, renovate, healthchecks, security]
 description: "How a Raspberry Pi and a desktop became a self-monitoring homelab: VPN-only access, a daily doctor script, 3-2-1 backups with a tested restore, and controlled updates, plus the incidents that taught me the most."
