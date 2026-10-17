@@ -1,0 +1,61 @@
+- title: Homelab
+  subtitle: Servidor propio, accesible solo por VPN
+  link: /posts/my-homelab-stack-that-runs-itself/
+  link_label: Cómo lo monté
+  items:
+    - { name: Raspberry Pi, icon: raspberrypi, note: Servidor 24/7 en casa }
+    - { name: Docker, icon: docker, note: 18 servicios con Docker Compose }
+    - { name: Tailscale, icon: tailscale, note: Acceso solo por VPN, cero puertos abiertos }
+    - { name: Nginx Proxy Manager, icon: nginxproxymanager, note: Proxy inverso con TLS }
+    - { name: Cloudflare, icon: cloudflare, note: Túnel para lo público }
+    - { name: Kopia, icon: "", note: Backups cifrados con copia en la nube }
+    - { name: Backblaze, icon: backblaze, note: Copia offsite }
+    - { name: Healthchecks, icon: "", note: Vigilancia y alertas }
+    - { name: Gitea, icon: gitea, note: Git autoalojado }
+    - { name: Renovate, icon: renovate, note: Actualizaciones con revisión }
+    - { name: Homepage, icon: homepage, note: Panel de control }
+- title: Seguridad
+  subtitle: Detección, bloqueo y buenas prácticas
+  link: /posts/home-soc-wazuh-homelab/
+  link_label: Mi SOC en casa
+  items:
+    - { name: Wazuh, icon: "", note: SIEM con agentes en Pi y escritorio }
+    - { name: CrowdSec, icon: "", note: Bloqueo comunitario de IPs }
+    - { name: Vaultwarden, icon: vaultwarden, note: Gestor de contraseñas }
+    - { name: Pi-hole, icon: pihole, note: DNS con bloqueo de anuncios }
+    - { name: Kali Linux, icon: kalilinux, note: Pentesting y CTFs }
+- title: Automatización e IA
+  subtitle: Flujos y agentes que trabajan solos
+  link: /posts/kitchen-assistant-telegram-grocy-tandoor-n8n/
+  link_label: Ver un caso real
+  items:
+    - { name: n8n, icon: n8n, note: Orquestación de flujos }
+    - { name: Telegram, icon: telegram, note: Interfaz y alertas }
+    - { name: Hermes Agent, icon: "", note: Asistente personal con IA }
+    - { name: Claude Code, icon: claude, note: Desarrollo y operaciones con agente }
+    - { name: OpenRouter, icon: openrouter, note: Acceso a modelos de IA }
+    - { name: Ollama, icon: ollama, note: Modelos locales }
+- title: QRFleet · producto SaaS
+  subtitle: De un código QR a una inspección
+  link: /posts/qrfleet-stack-from-qr-to-inspection/
+  link_label: Ver el caso
+  items:
+    - { name: Next.js, icon: nextdotjs, note: Frontend }
+    - { name: FastAPI, icon: fastapi, note: Backend }
+    - { name: PostgreSQL, icon: postgresql, note: Base de datos }
+    - { name: Supabase, icon: supabase, note: Base de datos y almacenamiento }
+    - { name: Hetzner, icon: hetzner, note: VPS de producción }
+    - { name: Sentry, icon: sentry, note: Errores }
+    - { name: PostHog, icon: posthog, note: Analítica }
+    - { name: Better Stack, icon: betterstack, note: Logs }
+    - { name: Resend, icon: resend, note: Email }
+    - { name: Cloudflare, icon: cloudflare, note: DNS }
+- title: Power Platform
+  subtitle: De la operación logística a IT
+  link: /posts/power-platform-logistics-operations-to-it/
+  link_label: Ver el caso
+  items:
+    - { name: Power BI, icon: powerbi, note: Dashboards de flota y puntualidad sobre vistas SQL }
+    - { name: Power Automate, icon: powerautomate, note: 9 flujos en producción }
+    - { name: Power Apps, icon: powerapps, note: RBConnectHub, app interna }
+    - { name: SharePoint, icon: microsoftsharepoint, note: Origen de datos y disparador de flujos }

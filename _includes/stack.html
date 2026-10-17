@@ -1,0 +1,183 @@
+<!--
+  SaskullOps · "Stack en producción" section
+  Rendered from _data/stack.yml. Icons: Simple Icons CDN (empty icon => text-only chip).
+-->
+<section class="saskull-stack" aria-labelledby="saskull-stack-title">
+  <div id="saskull-stack-title" class="saskull-stack-heading" role="heading" aria-level="2">
+    <span class="comment">//</span> STACK EN PRODUCCIÓN
+  </div>
+
+  <div class="saskull-stack-grid">
+    {% for group in site.data.stack %}
+      <div class="saskull-stack-card">
+        <h3 class="saskull-stack-title">{{ group.title }}</h3>
+        {% if group.subtitle %}
+          <p class="saskull-stack-subtitle">{{ group.subtitle }}</p>
+        {% endif %}
+
+        <div class="saskull-stack-chips">
+          {% for item in group.items %}
+            <span class="saskull-stack-chip" title="{{ item.note | escape }}" aria-label="{{ item.name | escape }}: {{ item.note | escape }}">
+              {% if item.icon and item.icon != '' %}
+                <img src="https://cdn.simpleicons.org/{{ item.icon }}/41E06E" alt="" width="16" height="16" loading="lazy">
+              {% endif %}
+              {{ item.name }}
+            </span>
+          {% endfor %}
+        </div>
+
+        {% if group.link %}
+          <a class="saskull-stack-link" href="{{ group.link | relative_url }}">&rarr; {{ group.link_label }}</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .saskull-stack {
+    padding: 0.5rem 0 1.5rem;
+  }
+
+  .saskull-stack-heading {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--heading-color);
+    margin: 0 0 1rem;
+    text-align: center;
+  }
+
+  .saskull-stack-heading .comment {
+    color: var(--brand-grafito);
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  .saskull-stack-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .saskull-stack-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 1200px) {
+    .saskull-stack-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .saskull-stack-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.1rem 1.15rem;
+    border-radius: 0.9rem;
+    border: 1px solid var(--card-border-color, #1E2330);
+    background: color-mix(in srgb, var(--card-bg, #0E1219) 70%, transparent);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .saskull-stack-card:hover {
+    border-color: rgba(65, 224, 110, 0.55);
+    box-shadow: 0 0 20px rgba(65, 224, 110, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .saskull-stack-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin: 0 0 0.2rem;
+    padding: 0;
+    border: 0;
+  }
+
+  .saskull-stack-title::before { content: none !important; }
+
+  .saskull-stack-subtitle {
+    font-size: 0.8rem;
+    color: var(--brand-grafito);
+    margin: 0 0 0.8rem;
+  }
+
+  .saskull-stack-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.9rem;
+    flex-grow: 1;
+    align-content: flex-start;
+  }
+
+  .saskull-stack-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 2rem;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.74rem;
+    color: var(--heading-color);
+    background: rgba(65, 224, 110, 0.1);
+    border: 1px solid rgba(65, 224, 110, 0.25);
+    cursor: default;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .saskull-stack-chip:hover {
+    background: rgba(65, 224, 110, 0.2);
+    border-color: var(--brand-neon);
+  }
+
+  /* Neutralize Chirpy's lazy-image shimmer/sizing for icons */
+  .saskull-stack-chip img {
+    flex: none;
+    width: 16px;
+    height: 16px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    animation: none;
+    box-shadow: none;
+  }
+
+  .saskull-stack-link {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--brand-neon-strong);
+    text-decoration: none !important;
+    align-self: flex-start;
+  }
+
+  .saskull-stack-link:hover {
+    color: var(--brand-neon);
+    text-shadow: 0 0 10px rgba(65, 224, 110, 0.4);
+  }
+
+  /* Light mode: neon icons on pale chips are low-contrast, so use the stronger green */
+  html[data-mode='light'] .saskull-stack-card {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  }
+
+  html[data-mode='light'] .saskull-stack-chip {
+    background: rgba(45, 184, 91, 0.1);
+    border-color: rgba(45, 184, 91, 0.35);
+  }
+
+  @media (prefers-color-scheme: light) {
+    html:not([data-mode]) .saskull-stack-card {
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+  }
+</style>
