@@ -24,25 +24,19 @@ Two machines:
 The Pi is the server; the desktop is the workshop. Both are managed by the same principles, which I will walk through in the order a request or an attacker would meet them: access, observability, security, backups, updates.
 
 ```mermaid
-flowchart LR
-    I["Internet"] -->|"only /webhook/* and a media folder"| CF["Cloudflare Tunnel"]
-    V["My devices"] -->|"Tailscale (WireGuard)"| TN["Tailnet"]
-    CF --> RP["Reverse proxy<br/>(Nginx Proxy Manager)"]
-    TN --> RP
-    RP -->|"access list: tailnet only"| P["Admin panels<br/>(Gitea, n8n, Vaultwarden, ...)"]
-    CF -->|"public paths only"| N["n8n webhooks"]
+flowchart TD
+    V["My devices"] -->|"Tailscale VPN"| RP
+    I["Internet"] -->|"webhooks only"| CF["Cloudflare Tunnel"]
+    CF --> N
     subgraph Pi["Raspberry Pi"]
-        RP
-        P
-        N
-        H["Healthchecks + doctor"]
-        K["Kopia"]
+        RP["Reverse proxy"] --> P["Admin panels"]
+        N["n8n webhooks"]
+        A["Wazuh agent"]
     end
-    subgraph Desk["Desktop (Torre)"]
+    subgraph Desk["Desktop"]
         W["Wazuh manager"]
-        O["Ollama, Jellyfin"]
     end
-    Pi <-->|"Wazuh agents"| W
+    A --> W
 ```
 
 ## Layer 1: access, or how to have no open ports
@@ -106,12 +100,12 @@ Two findings were embarrassing and useful. First, my Wazuh install was still on 
 A backup you have never restored is a hypothesis. I wanted 3-2-1: three copies, two media, one offsite.
 
 ```mermaid
-flowchart LR
-    D["Data<br/>config repo, Docker volumes,<br/>agent config, Pi-hole/CrowdSec/Cockpit config,<br/>notes vault"] -->|"nightly snapshot<br/>encrypted + deduplicated"| K["Kopia"]
-    K --> U["Local repository<br/>(USB drive)"]
-    U -->|"mirror (S3-compatible API)"| B["Backblaze B2<br/>versions kept 30 days"]
-    B -.->|"tested restore<br/>as if the Pi were dead"| R["Fresh machine"]
-    K -->|"success marker"| HC["Healthchecks + doctor"]
+flowchart TD
+    D["Configs, volumes, notes"] -->|"nightly, encrypted"| K["Kopia"]
+    K --> U["USB drive"]
+    U -->|"mirror"| B["Backblaze B2<br/>30-day versions"]
+    B -.->|"tested restore"| R["New machine"]
+    K -->|"success marker"| HC["Health checks"]
 ```
 
 Kopia takes nightly snapshots of what I could not rebuild from a clone: the config repository, Docker volumes, the AI agent's config, the Pi-hole, CrowdSec and Cockpit configuration, and my notes vault. Snapshots are encrypted and deduplicated, so a year of history is cheap. They land in a local repository on a USB drive, which is then mirrored to Backblaze B2. I used the S3-compatible API for that mirror, because Kopia's native B2 provider is deprecated. The bucket has a lifecycle rule that keeps deleted versions for 30 days, so a ransomware-style overwrite or an accidental delete can be undone.
@@ -135,17 +129,16 @@ The new approach has four parts.
 **A tiny GitOps timer deploys merges.** Every ten minutes a timer on the Pi fast-forwards the config repository and runs `docker compose up -d`. If the working tree is dirty or has diverged, it skips the deploy and tells me why, rather than guessing.
 
 ```mermaid
-flowchart LR
-    R["Renovate<br/>(nightly)"] -->|"PR with release notes"| G["Gitea"]
-    G --> D{"Service critical?"}
-    D -->|"no, patch update"| A["Automerge"]
-    D -->|"yes"| H["Human review"]
-    H --> M["Merge"]
-    A --> M
-    M --> T["Deploy timer<br/>(every 10 min)"]
-    T -->|"fast-forward + compose up -d"| S["Services"]
-    T -->|"dirty or diverged tree: skip, explain"| TG["Telegram"]
-    R -->|"run summary"| TG
+flowchart TD
+    R["Renovate, nightly"] -->|"pull request"| G["Gitea"]
+    G --> D{"Critical service?"}
+    D -->|"no, patch"| A["Automerge"]
+    D -->|"yes"| H["I review it"]
+    A --> M["Merged"]
+    H --> M
+    M --> T["Deploy timer, every 10 min"]
+    T --> S["Services updated"]
+    T --> TG["Telegram summary"]
 ```
 
 Watchtower is on its way out. I did not delete it the moment the new pipeline worked; I let both exist until I trust the new one.
