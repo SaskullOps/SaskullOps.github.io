@@ -182,7 +182,7 @@ The most valuable part of the whole exercise was not the tooling. It was the lis
 
 **One writer for secrets.** I edited the `.env` file in my editor while a scripted change was adding a fresh token. Saving the stale editor buffer silently erased it. Nothing failed loudly; a token just was not there anymore. Files full of secrets should have a single writer at a time.
 
-**Verify before you assert.** At one point I (the operator) claimed the router did not hand out a secondary DNS server. The DHCP options showed it did. A confident wrong statement is worse than "I don't know yet", and it applies to me as much as to the agent I work with.
+**Verify before you assert.** At one point the AI agent told me the router did not hand out a secondary DNS server. I said it did, and the DHCP options proved me right. A confident wrong statement is worse than "I don't know yet", whether it comes from me or from the agent, which is why every claim in this setup has to come with evidence.
 
 ## How to start your own
 
