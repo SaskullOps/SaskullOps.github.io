@@ -5,7 +5,7 @@
   items:
     - { name: Raspberry Pi, icon: raspberrypi, note: Servidor 24/7 en casa }
     - { name: Docker, icon: docker, note: 18 servicios con Docker Compose }
-    - { name: Tailscale, icon: tailscale, note: Acceso solo por VPN, cero puertos abiertos }
+    - { name: Tailscale, icon: tailscale, note: "Acceso solo por VPN, cero puertos abiertos" }
     - { name: Nginx Proxy Manager, icon: nginxproxymanager, note: Proxy inverso con TLS }
     - { name: Cloudflare, icon: cloudflare, note: Túnel para lo público }
     - { name: Kopia, icon: "", note: Backups cifrados con copia en la nube }
@@ -35,6 +35,8 @@
     - { name: Claude Code, icon: claude, note: Desarrollo y operaciones con agente }
     - { name: OpenRouter, icon: openrouter, note: Acceso a modelos de IA }
     - { name: Ollama, icon: ollama, note: Modelos locales }
+    - { name: LiteLLM, icon: "", note: Pasarela única a modelos locales y en la nube }
+    - { name: Langfuse, icon: "", note: "Trazas, costes y evaluación de agentes" }
 - title: QRFleet · producto SaaS
   subtitle: De un código QR a una inspección
   link: /posts/qrfleet-stack-from-qr-to-inspection/
@@ -57,5 +59,5 @@
   items:
     - { name: Power BI, icon: "", note: Dashboards de flota y puntualidad sobre vistas SQL }
     - { name: Power Automate, icon: "", note: 9 flujos en producción }
-    - { name: Power Apps, icon: "", note: RBConnectHub, app interna }
+    - { name: Power Apps, icon: "", note: "RBConnectHub, app interna" }
     - { name: SharePoint, icon: "", note: Origen de datos y disparador de flujos }
