@@ -19,7 +19,7 @@
           {% for item in group.items %}
             <span class="saskull-stack-chip" title="{{ item.note | escape }}" aria-label="{{ item.name | escape }}: {{ item.note | escape }}">
               {% if item.icon and item.icon != '' %}
-                <img src="https://cdn.simpleicons.org/{{ item.icon }}/41E06E" alt="" width="16" height="16" loading="lazy">
+                <img src="{{ '/assets/img/stack/' | append: item.icon | append: '.svg' | relative_url }}" alt="" width="16" height="16" loading="lazy">
               {% endif %}
               {{ item.name }}
             </span>
@@ -174,10 +174,18 @@
     border-color: rgba(45, 184, 91, 0.35);
   }
 
+  /* Icons are self-hosted SVGs filled with brand neon; darken them on light backgrounds */
+  html[data-mode='light'] .saskull-stack-chip img {
+    filter: brightness(0.62) saturate(1.3);
+  }
+
   @media (prefers-color-scheme: light) {
     html:not([data-mode]) .saskull-stack-card {
       background: #ffffff;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+    html:not([data-mode]) .saskull-stack-chip img {
+      filter: brightness(0.62) saturate(1.3);
     }
   }
 </style>

@@ -55,7 +55,7 @@
   link: /posts/power-platform-logistics-operations-to-it/
   link_label: Ver el caso
   items:
-    - { name: Power BI, icon: powerbi, note: Dashboards de flota y puntualidad sobre vistas SQL }
-    - { name: Power Automate, icon: powerautomate, note: 9 flujos en producción }
-    - { name: Power Apps, icon: powerapps, note: RBConnectHub, app interna }
-    - { name: SharePoint, icon: microsoftsharepoint, note: Origen de datos y disparador de flujos }
+    - { name: Power BI, icon: "", note: Dashboards de flota y puntualidad sobre vistas SQL }
+    - { name: Power Automate, icon: "", note: 9 flujos en producción }
+    - { name: Power Apps, icon: "", note: RBConnectHub, app interna }
+    - { name: SharePoint, icon: "", note: Origen de datos y disparador de flujos }
