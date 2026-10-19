@@ -37,6 +37,7 @@
     - { name: Ollama, icon: ollama, note: Modelos locales }
     - { name: LiteLLM, icon: "", note: Pasarela única a modelos locales y en la nube }
     - { name: Langfuse, icon: "", note: "Trazas, costes y evaluación de agentes" }
+    - { name: Obsidian, icon: obsidian, note: "Base de conocimiento; Hermes y scripts escriben en ella" }
 - title: QRFleet · producto SaaS
   subtitle: De un código QR a una inspección
   link: /posts/qrfleet-stack-from-qr-to-inspection/
@@ -61,3 +62,14 @@
     - { name: Power Automate, icon: "", note: 9 flujos en producción }
     - { name: Power Apps, icon: "", note: "RBConnectHub, app interna" }
     - { name: SharePoint, icon: "", note: Origen de datos y disparador de flujos }
+- title: Entorno de trabajo
+  subtitle: Donde escribo, opero y construyo
+  items:
+    - { name: CachyOS, icon: "", note: Escritorio principal en Linux }
+    - { name: Hyprland, icon: hyprland, note: Gestor de ventanas en mosaico }
+    - { name: Neovim, icon: neovim, note: Editor principal con LazyVim }
+    - { name: tmux, icon: tmux, note: Sesiones persistentes en terminal }
+    - { name: Zsh, icon: zsh, note: Shell con Starship }
+    - { name: Obsidian, icon: obsidian, note: "Notas y documentación, sincronizadas con Syncthing" }
+    - { name: Claude Code, icon: claude, note: Agente de desarrollo en la terminal }
+    - { name: Git, icon: "", note: Lazygit y Gitea }
