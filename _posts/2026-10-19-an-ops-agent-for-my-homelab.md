@@ -1,6 +1,6 @@
 ---
 title: "An ops agent for my homelab: MCP, LangGraph and a gateway that keeps the bill honest"
-date: 2026-10-20 09:00:00 +0200
+date: 2026-10-19 09:00:00 +0200
 categories: [Homelab, IA]
 tags: [homelab, mcp, langgraph, litellm, langfuse, ai-agents, evals, telegram, llm-costs, observability]
 description: "How I made my self-monitoring homelab answerable: a read-only MCP server, a LangGraph diagnosis agent that cannot execute anything, models routed by evaluation, and the numbers (and cost mistakes) behind it."
