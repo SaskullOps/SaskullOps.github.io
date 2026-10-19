@@ -69,6 +69,8 @@
     - { name: Hyprland, icon: hyprland, note: Gestor de ventanas en mosaico }
     - { name: Neovim, icon: neovim, note: Editor principal con LazyVim }
     - { name: tmux, icon: tmux, note: Sesiones persistentes en terminal }
+    - { name: herdr, icon: "", note: Espacio de trabajo en terminal para agentes de código }
+    - { name: Moshi, icon: "", note: "Terminal móvil: acceso al Pi por SSH desde el teléfono" }
     - { name: Zsh, icon: zsh, note: Shell con Starship }
     - { name: Obsidian, icon: obsidian, note: "Notas y documentación, sincronizadas con Syncthing" }
     - { name: Claude Code, icon: claude, note: Agente de desarrollo en la terminal }
