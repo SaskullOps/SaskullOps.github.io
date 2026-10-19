@@ -65,8 +65,8 @@
 - title: Entorno de trabajo
   subtitle: Donde escribo, opero y construyo
   items:
-    - { name: CachyOS, icon: "", note: Escritorio principal en Linux }
-    - { name: Hyprland, icon: hyprland, note: Gestor de ventanas en mosaico }
+    - { name: CachyOS, icon: "", note: Base Arch optimizada }
+    - { name: Omarchy, icon: "", note: Escritorio Hyprland preconfigurado }
     - { name: Neovim, icon: neovim, note: Editor principal con LazyVim }
     - { name: tmux, icon: tmux, note: Sesiones persistentes en terminal }
     - { name: herdr, icon: "", note: Espacio de trabajo en terminal para agentes de código }
