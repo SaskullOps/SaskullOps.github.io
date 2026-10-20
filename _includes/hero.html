@@ -1,32 +1,35 @@
 <!--
   SaskullOps · Homepage Hero Section
-  Brand mark + tagline + category pills + CTA
+  Banner cover + overlapping portrait + name + CTA
 -->
 <div class="saskull-hero">
-  <div class="saskull-hero-content">
+  <div class="saskull-hero-cover">
     <img
-      src="{{ '/assets/img/brand/saskullops-avatar-ring-512.png' | relative_url }}"
+      src="{{ '/assets/img/brand/saskullops-banner.png' | relative_url }}"
       alt="SaskullOps"
-      class="saskull-hero-avatar"
-      width="96"
-      height="96"
+      class="saskull-hero-banner"
+      width="1800"
+      height="600"
       loading="eager"
     >
+  </div>
 
-    <div class="saskull-hero-tagline">
-      <span class="comment">//</span> breaking <span class="dim">·</span> building <span class="dim">·</span> automating
-    </div>
+  <img
+    src="{{ '/assets/img/brand/alex-photo-480.jpg' | relative_url }}"
+    alt="Alex Guardiola"
+    class="saskull-hero-photo"
+    width="128"
+    height="128"
+    loading="eager"
+  >
+
+  <div class="saskull-hero-content">
+    <h1 class="saskull-hero-name">Alex Guardiola</h1>
 
     <p class="saskull-hero-sub">
-      Ciberseguridad práctica, automatización con IA y homelab.
-      Documentado en abierto mientras lo construyo.
+      Automatización, homelab, seguridad e IA.
+      Mi cuaderno de aprendizaje, documentado en abierto mientras lo construyo.
     </p>
-
-    <div class="saskull-hero-pills">
-      <span class="pill pill-cyber">CYBERSEC</span>
-      <span class="pill pill-ai">AI</span>
-      <span class="pill pill-auto">AUTOMATION</span>
-    </div>
 
     <div class="saskull-hero-cta">
       <a href="#post-list" class="btn btn-primary btn-sm">Explorar artículos</a>
@@ -40,41 +43,58 @@
 <style>
   .saskull-hero {
     text-align: center;
-    padding: 2.5rem 1rem 1.5rem;
+    padding: 0.5rem 0 1.5rem;
     position: relative;
   }
 
-  .saskull-hero-avatar {
-    width: 96px;
-    height: 96px;
+  .saskull-hero-cover {
+    border-radius: 0.9rem;
+    overflow: hidden;
+    border: 1px solid var(--card-border-color, #1E2330);
+  }
+
+  .saskull-hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+    animation: none;
+  }
+
+  .saskull-hero-photo {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: -64px auto 0;
+    position: relative;
     border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--main-bg, #0b0f14);
     box-shadow: 0 0 24px rgba(65, 224, 110, 0.25);
-    margin-bottom: 1rem;
+    background: none;
+    animation: none;
     transition: box-shadow 0.3s ease;
   }
 
-  .saskull-hero-avatar:hover {
+  .saskull-hero-photo:hover {
     box-shadow: 0 0 40px rgba(65, 224, 110, 0.45);
   }
 
-  .saskull-hero-tagline {
-    font-size: 1.4rem;
-    font-weight: 600;
+  .saskull-hero-name {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: var(--heading-color);
-    margin-bottom: 0.6rem;
+    margin: 0.75rem 0 0.4rem;
     letter-spacing: -0.3px;
   }
 
-  .saskull-hero-tagline .comment {
-    color: var(--brand-grafito);
-    font-weight: 400;
-    opacity: 0.5;
-  }
-
-  .saskull-hero-tagline .dim {
-    color: var(--brand-grafito);
-    font-weight: 300;
-  }
+  .saskull-hero-name::before { content: none !important; }
 
   .saskull-hero-sub {
     font-size: 0.95rem;
@@ -82,64 +102,6 @@
     max-width: 480px;
     margin: 0 auto 1.25rem;
     line-height: 1.6;
-  }
-
-  .saskull-hero-pills {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 1.25rem;
-  }
-
-  .pill {
-    display: inline-block;
-    padding: 0.35rem 1rem;
-    border-radius: 2rem;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    border: 1.5px solid transparent;
-  }
-
-  .pill:hover {
-    transform: translateY(-2px);
-    text-decoration: none !important;
-  }
-
-  .pill-cyber {
-    background: rgba(65, 224, 110, 0.12);
-    color: var(--brand-neon);
-    border-color: rgba(65, 224, 110, 0.25);
-  }
-  .pill-cyber:hover {
-    background: var(--brand-neon);
-    color: var(--brand-carbon);
-    box-shadow: 0 0 16px rgba(65, 224, 110, 0.3);
-  }
-
-  .pill-ai {
-    background: rgba(99, 102, 241, 0.12);
-    color: #818cf8;
-    border-color: rgba(99, 102, 241, 0.25);
-  }
-  .pill-ai:hover {
-    background: #6366f1;
-    color: #fff;
-    box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
-  }
-
-  .pill-auto {
-    background: rgba(251, 146, 60, 0.12);
-    color: #fb923c;
-    border-color: rgba(251, 146, 60, 0.25);
-  }
-  .pill-auto:hover {
-    background: #f97316;
-    color: #fff;
-    box-shadow: 0 0 16px rgba(251, 146, 60, 0.3);
   }
 
   .saskull-hero-cta {
@@ -162,18 +124,19 @@
   }
 
   @media (max-width: 576px) {
-    .saskull-hero {
-      padding: 1.5rem 0.5rem 1rem;
+    .saskull-hero-banner {
+      max-height: 140px;
     }
-    .saskull-hero-tagline {
-      font-size: 1.1rem;
+    .saskull-hero-photo {
+      width: 80px;
+      height: 80px;
+      margin-top: -28px;
+    }
+    .saskull-hero-name {
+      font-size: 1.35rem;
     }
     .saskull-hero-sub {
       font-size: 0.85rem;
-    }
-    .saskull-hero-avatar {
-      width: 72px;
-      height: 72px;
     }
   }
 </style>
