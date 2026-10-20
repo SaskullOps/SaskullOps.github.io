@@ -7,49 +7,54 @@
 <h1 align="center">SaskullOps</h1>
 
 <p align="center">
-  <strong><code>// breaking · building · automating</code></strong>
+  <strong><code>Automation | Homelab | Security | AI</code></strong>
 </p>
 
 <p align="center">
-  <a href="https://saskullops.github.io">🌐 saskullops.github.io</a>
+  <a href="https://saskullops.github.io">saskullops.github.io</a>
 </p>
 
 <br>
 
-## 🎯 ¿Qué es SaskullOps?
+## What is this?
 
-Un **laboratorio abierto** donde se documenta cómo utilizar **IA, automatización y buenas prácticas IT** para mejorar la **ciberseguridad** y la **productividad profesional**.
+My personal learning notebook. I work in IT, coming from logistics operations, and I use this site to build in public the things I want to understand better: automation, a self-hosted homelab, defensive security and where AI actually helps.
 
-No es un medio de noticias. Es un espacio de **construcción pública** donde comparto lo que funciona (y lo que no) mientras construyo mi infraestructura, mis automatizaciones y mi aprendizaje en seguridad.
+Posts explain what I built and why I made each decision, including what went wrong.
 
 <br>
 
-## 📂 Contenido
+## Topics
 
-| Categoría | Tags |
+| Area | What you will find |
 |---|---|
-| **Homelabs & Automatización** | `#Docker` `#n8n` `#RaspberryPi` `#HermesAgent` |
-| **Ciberseguridad Práctica** | `#hardening` `#SOC` `#monitorización` `#CTF` |
-| **IA para Profesionales IT** | `#LLMs` `#OpenRouter` `#agentes` `#automatización` |
-| **Build in Public** | `#costes` `#decisiones` `#aprendizajes` |
+| **Automation** | n8n, Power Platform, Telegram bots, workflows that run on their own |
+| **Homelab** | A Raspberry Pi with Docker, VPN-only access, backups, alerts and GitOps updates |
+| **Security** | A home SOC with Wazuh and CrowdSec, hardening, CTF write-ups |
+| **AI** | Agents, a model gateway with LiteLLM, tracing and cost control |
+| **Product** | QRFleet, a fleet damage reporting app built end to end |
 
 <br>
 
-## 🚀 Stack
+## Stack
 
 ```
-Homelab      →  Raspberry Pi 4 + Docker
-Automatización → n8n + Hermes Agent
-Blog         → Jekyll + Chirpy Theme · GitHub Pages
-Modelos      → Ollama (local) · OpenRouter (cloud)
-Newsletter   → Próximamente
+Homelab     ->  Raspberry Pi · Docker Compose · Tailscale · Cloudflare Tunnel
+Security    ->  Wazuh · CrowdSec · Vaultwarden · Pi-hole
+Automation  ->  n8n · Telegram · Power Platform
+AI          ->  Hermes Agent · LiteLLM · Ollama · OpenRouter · Langfuse
+Product     ->  Next.js · FastAPI · PostgreSQL · Supabase · Hetzner
+Workspace   ->  CachyOS · Omarchy · Neovim · tmux · Obsidian · Claude Code
+Site        ->  Jekyll · Chirpy theme · GitHub Pages
 ```
+
+The full, up-to-date list lives in the "Stack en producción" section of the [home page](https://saskullops.github.io).
 
 <br>
 
-## 📬 Contacto
+## Contact
 
-- **Blog:** [saskullops.github.io](https://saskullops.github.io)
+- **Site:** [saskullops.github.io](https://saskullops.github.io)
 - **GitHub:** [@SaskullOps](https://github.com/SaskullOps)
 - **Email:** a.guardiola.m@gmail.com
 
@@ -58,7 +63,5 @@ Newsletter   → Próximamente
 ---
 
 <p align="center">
-  <strong>Hecho con ☕, 🖥️ y mucha paciencia</strong>
-  <br>
-  <sub>© 2025 SaskullOps · Construido en público</sub>
+  <sub>© 2026 SaskullOps · Built in public</sub>
 </p>
