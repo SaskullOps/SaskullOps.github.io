@@ -8,6 +8,8 @@ Hi, I'm **Alex Guardiola**.
 
 This is my learning notebook. I work in IT, coming from logistics operations, and I use this site to build in public the things I want to understand better: automation, my homelab, security and where AI actually helps.
 
+Right now I'm studying AI engineering and applying it in these projects as I go.
+
 ### What I'm learning by building
 
 - **Automation and reporting at work.** Power Platform, SQL, Power BI and M365, with Python and n8n where they fit better. Lately I'm testing where AI assistance saves time in reporting and where a plain script does the job.
