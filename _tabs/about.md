@@ -22,7 +22,7 @@ Posts explain what I built and why I made each decision, including what went wro
 ### Find me elsewhere
 
 - [GitHub](https://github.com/Saskullz)
-- [LinkedIn](https://www.linkedin.com/in/%C3%A0lex-guardiola-mart%C3%ADnez-67a5a8133)
+- [LinkedIn](https://www.linkedin.com/in/saskullops)
 
 ---
 
