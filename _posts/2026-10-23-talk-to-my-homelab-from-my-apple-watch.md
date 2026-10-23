@@ -1,6 +1,6 @@
 ---
 title: "I talk to my homelab from my Apple Watch (and it is not allowed to do anything)"
-date: 2026-10-23 09:00:00 +0200
+date: 2026-10-23 08:00:00 +0200
 categories: [Homelab, IA]
 tags: [homelab, n8n, siri, apple-watch, hermes-agent, llm, security, raspberry-pi, telegram]
 description: "A Siri Shortcut, a Raspberry Pi, n8n and an agent: how I ask my homelab questions from my wrist for 0.2 cents, why the voice path is read-only, and what an independent security review found before I open-sourced it."
